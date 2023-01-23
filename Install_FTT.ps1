@@ -18,7 +18,7 @@ Remove-Item .\aria2-1.36.0-win-64bit-build1\ -Force -Recurse
 write-output "Creating FinvasiaTradeTerminal Icon on Desktop"
 
 $SourceFilePath = "$env:USERPROFILE\FinvasiaTradeTerminal\python.exe"
-$ArgumentsToSourceExe = "Zerodha_Trade_Terminal_V3_001.py"
+$ArgumentsToSourceExe = "Finvasia_Trade_Terminal_V3.py"
 $ShortcutPath = "$env:USERPROFILE\Desktop\FinvasiaTradeTerminal.lnk"
 $WScriptObj = New-Object -ComObject ("WScript.Shell")
 $shortcut = $WscriptObj.CreateShortcut($ShortcutPath)
@@ -27,9 +27,8 @@ $Shortcut.Arguments = $ArgumentsToSourceExe
 $Shortcut.IconLocation = "$env:USERPROFILE\FinvasiaTradeTerminal\PythonTrader.ico"
 $Shortcut.WorkingDirectory = "$env:USERPROFILE\FinvasiaTradeTerminal"
 $shortcut.WindowStyle = 1
-$ShortCut.Hotkey = "CTRL+ALT+SHIFT+Z"
+$ShortCut.Hotkey = "CTRL+ALT+SHIFT+F"
 $shortcut.Save()
 
 $desktopfolder = "$env:USERPROFILE\Desktop"
-
 cd $desktopfolder
